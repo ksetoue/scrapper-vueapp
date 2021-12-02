@@ -23,7 +23,7 @@
           @click="setActiveSourceLink(link, index)"
         >
           {{ link.title }}
-          <router-link :to="'/links/' + currentLink.id" class="badge badge-warning">Edit</router-link>
+          <router-link :to="'/links/' + link.id" class="badge badge-warning">Edit</router-link>
         </li>
       </ul>
 
@@ -40,7 +40,17 @@
         <div>
           <label><strong>Source Links:</strong></label> {{ currentLink.source }}
         </div>
-        
+        <div>
+          <label><strong> Links found in webpage:</strong></label>
+          <ul class="list-group">
+            <li class="list-group-item"
+              v-for="(nestedLink, index) in currentLink.nestedLinks"
+              :key="index"
+            >
+              <a href='#'>{{ nestedLink.content }}</a>
+            </li>
+          </ul>
+        </div>
       </div>
       <div v-else>
         <br />
