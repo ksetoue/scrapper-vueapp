@@ -47,7 +47,7 @@
               v-for="(nestedLink, index) in currentLink.nestedLinks"
               :key="index"
             >
-              <a href='#'>{{ nestedLink.content }}</a>
+              <a :href=nestedLink.content target="_blank"><p>{{ nestedLink.content }}</p></a>
             </li>
           </ul>
         </div>

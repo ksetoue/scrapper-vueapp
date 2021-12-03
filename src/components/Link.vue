@@ -7,8 +7,8 @@
         <input type="text" class="form-control" id="title"
           v-model="currentLink.title"
         />
-      <!-- </div>
-      <div class="form-group">
+      </div>
+      <!-- <div class="form-group">
         <label for="source">Souce link</label>
         <input type="text" class="form-control" id="source"
           v-model="currentLink.source"
